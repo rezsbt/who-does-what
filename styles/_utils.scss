@@ -1,0 +1,44 @@
+// > ------------------ PROJECT UTILS ----------------------
+
+
+// > -------------------- VARIABLES ------------------------
+// GRAY
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+// BREAKPOINTS
+$xs-max: 575.98px;
+$sm-min: 576px;
+$sm-max: 767.98px;
+$md-min: 768px;
+$md-max: 991.98px;
+$lg-min: 992px;
+$lg-max: 1199.98px;
+$xl-min: 1200px;
+
+
+// > --------------------- MIXINS --------------------------
+@mixin line-clamp ($line: 1) {
+  display: -webkit-box;
+	-webkit-line-clamp: $line;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+
+// > ------------------ PLACEHOLDERS -----------------------
+%no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
