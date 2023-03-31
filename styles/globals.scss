@@ -12,8 +12,13 @@
 }
 
 .container {
-  width: $xs-max;
+  width: $sm-min;
   margin: auto;
+  @media screen and (max-width: $xs-max) {
+    width: unset;
+    margin: 0;
+    padding: 0 1rem;
+  }
 }
 
 a {
