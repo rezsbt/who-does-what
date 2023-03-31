@@ -1,0 +1,17 @@
+@import '../../styles/utils';
+
+.footer {
+  background: $bg-dark;
+  padding: 1rem;
+  p {
+    color: $text-white;
+    text-align: center;
+  }
+  a {
+    color: $primary-color;
+    padding: 0.2rem;
+  }
+  .line {
+    padding: 0 0.5rem;
+  }
+}

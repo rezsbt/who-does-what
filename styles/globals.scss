@@ -1,3 +1,4 @@
+// @import '../node_modules/open-color/open-color';
 @import './utils';
 
 // Import Source sans pro (200, 300, 400, 600, 700, 900)
@@ -6,10 +7,27 @@
 * {
   font-family: 'Source Sans Pro', sans-serif;
   box-sizing: border-box;
-}
-
-head,
-body {
   margin: 0;
   padding: 0;
+}
+
+.container {
+  width: $xs-max;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: $text-black;
+  transition: color 150ms ease-in-out;
+  &:hover {
+    color: $primary-color-hover;
+  }
+  &:active {
+    color: $primary-color-click;
+  }
+}
+
+button {
+  border: none;
 }

@@ -1,5 +1,18 @@
+@import '../node_modules/open-color/open-color';
+
 // > ------------------ PROJECT UTILS ----------------------
 
+$text-black: $oc-gray-8;
+$text-white: $oc-gray-1;
+
+$primary-color: $oc-indigo-5;
+$primary-color-hover: $oc-indigo-6;
+$primary-color-click: $oc-indigo-7;
+
+$bg-dark: $oc-gray-9;
+$bg-light: white;
+
+$border-radius: 0.25rem;
 
 // > -------------------- VARIABLES ------------------------
 // GRAY

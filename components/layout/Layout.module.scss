@@ -1,0 +1,14 @@
+@import '../../styles/utils';
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-start;
+  gap: 1rem;
+  min-height: 100vh;
+}
+
+.main {
+  flex-grow: 1;
+  flex-basis: 0;
+}
