@@ -20,14 +20,25 @@ a {
   text-decoration: none;
   color: $text-black;
   transition: color 150ms ease-in-out;
-  &:hover {
-    color: $primary-color-hover;
-  }
-  &:active {
-    color: $primary-color-click;
-  }
+  // &:hover {
+  //   color: $primary-color-hover;
+  // }
+  // &:active {
+  //   color: $primary-color-click;
+  // }
 }
 
 button {
   border: none;
+}
+
+.pageTitle {
+  text-align: center;
+  color: $primary-color;
+  border-bottom: $primary-color 0.25rem solid;
+  border-top: $primary-color 0.25rem solid;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
 }

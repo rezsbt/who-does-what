@@ -1,0 +1,51 @@
+@import '../../styles/utils';
+
+.container {
+  background: $oc-gray-3;
+  padding: 1rem;
+  border-radius: $border-radius;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 150ms ease-in-out;
+  cursor: default;
+  &:hover {
+    transform: translateY(-3px)
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.fullName {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: $text-black;
+}
+
+.job {
+  font-size: 16px;
+  color: $oc-gray-6;
+  text-transform: capitalize
+}
+
+.infoButton {
+  background: transparent;
+  color: $text-black;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0.5rem;
+  transition: color 150ms ease-in-out, background 150ms ease-in-out;
+  &:hover {
+    background: transparent;
+    color: $text-black;
+  }
+  &:active {
+    background: $oc-gray-4;
+    color: $text-black;
+  }
+}

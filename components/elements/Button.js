@@ -35,7 +35,7 @@ function ButtonLink ({ href, onClick, children, icon, className }) {
       className={`${styles.link} ${className}`}
     >
       {!!icon && icon}
-      <span>{children}</span>
+      {!!children && <span>{children}</span>}
     </Link>
   )
 }
@@ -47,7 +47,7 @@ function JustButton ({ onClick, children, icon, className }) {
       className={`${styles.button} ${className}`}
     >
       {!!icon && icon}
-      <span>{children}</span>
+      {!!children && <span>{children}</span>}
     </button>
   )
 }
