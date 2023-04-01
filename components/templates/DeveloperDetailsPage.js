@@ -31,16 +31,16 @@ export default function DeveloperDetailsPage ({ developer }) {
       
       <div className={`${styles.section} ${styles.skills}`}>
         {developer.skills.map(skill => (
-          <aritcle key={skill._id} className={styles.skill}>
+          <article key={skill._id} className={styles.skill}>
             <p>{skill.title}</p>
             <p>{levelValueToLabel(skill.level)}</p>
-          </aritcle>
+          </article>
         ))}
       </div>
       
       <div className={`${styles.section} ${styles.buttons}`}>
         <Button onClick={() => deleteHandler(developer._id)} variant='outline' className={styles.delete}>Delete</Button>
-        <Button href={`/api/developer/edit/${developer._id}`} className={styles.edit}>Edit</Button>
+        <Button href={`/developer/edit/${developer._id}`} className={styles.edit}>Edit</Button>
       </div>
       
     </>
