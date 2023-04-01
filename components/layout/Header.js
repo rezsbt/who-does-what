@@ -12,7 +12,7 @@ export default function Header () {
           <Link href='/' className={styles.logo}>
             <h1>Who Does What?</h1>
           </Link>
-          <Button href='/add-developer' icon={<AiOutlinePlus/>}>Add Developer</Button>
+          <Button href='/developer/add' icon={<AiOutlinePlus/>}>Add Developer</Button>
         </div>
       </div>
     </header>
