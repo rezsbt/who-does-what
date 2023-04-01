@@ -2,7 +2,7 @@ import Developer from "@/model/Developer"
 // Helpers
 import { connectDB } from "@/helpers/database"
 import { errorDivider } from "@/helpers/functions"
-import { developerValidation, skillsValidation } from "@/helpers/serverValidation"
+import { developerValidation, skillsValidation } from "@/helpers/serverValidations"
 
 export default async function handler (req, res) {
   
