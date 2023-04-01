@@ -2,14 +2,14 @@ import Link from 'next/link'
 // Styles
 import styles from './Button.module.scss'
 
-export default function Button ({ children, href, onClick, className, icon }) {
+export default function Button ({ children, href, onClick, className, icon, color, variant }) {
   
   if (!!href) return (
     <ButtonLink
       href={href}
       onClick={onClick}
       icon={icon}
-      className={className}
+      className={`${!!className ? className : ''} ${!!variant ? styles[variant] : ''} ${!!color ? styles[color] : ''}`}
     >
       {children}
     </ButtonLink>
@@ -19,7 +19,7 @@ export default function Button ({ children, href, onClick, className, icon }) {
     <JustButton
       onClick={onClick}
       icon={icon}
-      className={className}
+      className={`${!!className ? className : ''} ${!!variant ? styles[variant] : ''} ${!!color ? styles[color] : ''}`}
     >
       {children}
     </JustButton>

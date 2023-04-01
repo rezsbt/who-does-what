@@ -13,6 +13,7 @@
   border-radius: $border-radius;
   transition: background 150ms ease-in-out;
   font-size: 16px;
+  cursor: pointer;
   &:hover {
     background: $primary-color-hover;
     color: $text-white;
@@ -21,9 +22,36 @@
     background: $primary-color-click;
     color: $text-white;
   }
-}
-
-.button {}
-
-.link {
+  
+  &.outline {
+    background: transparent;
+    color: $primary-color;
+    border: 0.1rem solid $primary-color;
+    padding: 0.4rem 0.8rem;
+    transition: background 150ms ease-in-out, color 150ms ease-in-out;
+    &:hover {
+      background: $primary-color;
+      color: $text-white;
+      border: 0.1rem solid $primary-color;
+    }
+    &:active {
+      background: $primary-color-click;
+      color: $text-white;
+      border: 0.1rem solid $primary-color-click;
+    }
+  }
+  
+  &.transparent {
+    background-color: transparent;
+    color: $primary-color;
+    transition: transform 150ms ease-in-out;
+    &:hover {
+      color: $primary-color;
+    }
+    &:active {
+      transform: scale(0.95);
+      color: $primary-color;
+    }
+  }
+  
 }
