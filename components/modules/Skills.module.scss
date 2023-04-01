@@ -1,0 +1,66 @@
+@import '../../styles/utils';
+
+.container {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  
+}
+
+.skill {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $oc-gray-1;
+  padding: 0.5rem 1rem;
+  border-radius: $border-radius;
+}
+
+.content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.title {
+  text-transform: capitalize;
+  font-size: 16px;
+  color: $text-black;
+}
+
+.level {
+  font-size: 14px;
+  color: $text-light-gray;
+  margin-left: 0.5rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.delete {
+  background: transparent;
+  color: $text-black;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0.5rem;
+  transition: color 150ms ease-in-out, background 150ms ease-in-out;
+  &:hover {
+    background: transparent;
+  }
+  &:active {
+    background: $oc-gray-4;
+  }
+}
+
+.delete {
+  &:hover {
+    color: $oc-red-4;
+  }
+  &:active{
+    color: $oc-red-4;
+  }
+}

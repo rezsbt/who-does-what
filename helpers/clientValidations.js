@@ -36,8 +36,16 @@ const developerDetailsValidation = ({ firstName, lastName, phone, email, job }) 
 const developerSkillsValidation = data => {
   
   const errors = {}
+  const validLevels = ['BASIC', 'INTERMEDIATE', 'ADVANCED']
   
+  // Skill title
+  if (!data.title) errors.title = 'Title is required'
+  else delete errors.title
   
+  // Skill level
+  if (!data.level) errors.level = 'Level is required'
+  else if (!validLevels.includes(data.level)) errors.level = 'Level is invalid'
+  else delete errors.level
   
   return errors
   

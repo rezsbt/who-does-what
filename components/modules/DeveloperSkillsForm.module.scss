@@ -1,0 +1,25 @@
+@import '../../styles/utils';
+
+.buttonsContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: $row-gap;
+}
+
+.cancel {
+  flex-grow: 1;
+}
+
+.create {
+  flex-grow: 3;
+}
+
+.error {
+  background: $oc-red-1;
+  padding: 1rem;
+  text-align: center;
+  border-radius: $border-radius;
+  color: $oc-red-5;
+  margin-bottom: 1rem;
+}
