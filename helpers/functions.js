@@ -5,4 +5,13 @@ const errorDivider = (title, message, dividerCharacter = '*', repeatCharacter = 
   console.log(`${divider} ${title.toUpperCase()} ${divider}`)
 }
 
-export { errorDivider } 
+const levelValueToLabel = level => {
+  switch (level) {
+    case 'BASIC': return 'Basic'
+    case 'INTERMEDIATE': return 'Intermediate'
+    case 'ADVANCED': return 'Advanced'
+    default: return 'Basic'
+  }
+}
+
+export { errorDivider, levelValueToLabel } 

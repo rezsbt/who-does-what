@@ -12,7 +12,7 @@ export default function DeveloperCard ({ firstName, lastName, job, _id }) {
         
         <span className={styles.job}>{job}</span>
       </div>
-      <Button href={`/developer/${_id}`} icon={<AiOutlineInfoCircle/>} className={styles.infoButton}/>
+      <Button href={`/developer/details/${_id}`} icon={<AiOutlineInfoCircle/>} className={styles.infoButton}/>
     </article>
   )
 }

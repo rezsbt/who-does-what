@@ -1,0 +1,52 @@
+@import '../../styles/utils';
+
+.section {
+  background-color: $oc-gray-2;
+  padding: 1rem;
+  border-radius: $border-radius;
+  margin-bottom: 1rem;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  p {
+    color: $text-light-gray;
+  }
+  span {
+    color: $text-black;
+    margin-left: 0.5rem;
+  }
+}
+
+.skill {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $bg-dark;
+  color: $text-white;
+  padding: 1rem;
+  border-radius: $border-radius;
+  margin-bottom: 1rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: $row-gap;
+}
+
+.edit {
+  flex-grow: 2;
+  flex-basis: 0;
+}
+
+.delete {
+  flex-grow: 1;
+  flex-basis: 0;
+}

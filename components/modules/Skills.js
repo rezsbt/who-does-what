@@ -3,6 +3,8 @@ import { AiOutlineDelete, AiOutlineEdit } from 'react-icons/ai'
 import styles from './Skills.module.scss'
 // Components
 import Button from '../elements/Button'
+// Helpers
+import { convertLevel } from '@/helpers/functions'
 
 export default function Skills ({ data, setData }) {
   return (
@@ -23,14 +25,7 @@ function Skill ({ title, level, index, _id, setData, data }) {
     }
   }
   
-  const convertLevel = level => {
-    switch (level) {
-      case 'BASIC': return 'Basic'
-      case 'INTERMEDIATE': return 'Intermediate'
-      case 'ADVANCED': return 'Advanced'
-      default: return 'Basic'
-    }
-  }
+  
   
   return (
     <article className={styles.skill}>
