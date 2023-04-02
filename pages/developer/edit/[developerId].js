@@ -3,6 +3,8 @@ import axios from "axios"
 import { useRouter } from "next/router"
 // Components
 import EditDeveloperPage from "@/components/templates/EditDeveloperPage"
+// Helpers
+import { defaultAjaxError } from "@/helpers/functions"
 
 export default function EditDeveloper () {
   
@@ -15,7 +17,7 @@ export default function EditDeveloper () {
     if (!!developerId) {
       axios.get(`/api/developer/${developerId}`)
         .then(res => setData(res.data.data))
-        .catch(err => console.log(err))
+        .catch(err => defaultAjaxError(err.request.status, err.message))
     }
   }, [developerId])
   
