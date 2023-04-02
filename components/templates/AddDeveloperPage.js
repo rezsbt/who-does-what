@@ -1,3 +1,4 @@
+import axios from "axios"
 import { useEffect, useState } from "react"
 // Styles
 import styles from './AddDeveloperPage.module.scss'
@@ -5,7 +6,7 @@ import styles from './AddDeveloperPage.module.scss'
 import DeveloperDetailsForm from "../modules/DeveloperDetailsForm"
 import DeveloperSkillsForm from "../modules/DeveloperSkillsForm"
 import Button from "../elements/Button"
-import axios from "axios"
+import { useRouter } from "next/router"
 
 const initialData = {
   firstName: '',
@@ -31,6 +32,8 @@ export default function AddDeveloperPage () {
   const [detailsErrors, setDetailsErrors] = useState(initialDetailsErrors)
   const [skillsError, setSkillsError] = useState(false)
   
+  const router = useRouter()
+  
   useEffect(() => {
     if (!!data.skills.length) setSkillsError(false)
   }, [data])
@@ -41,7 +44,9 @@ export default function AddDeveloperPage () {
     
     if (!Object.keys(detailsErrors).length && !!data.skills.length) {
       await axios.post('/api/developer', { data, })
-        .then(res => console.log(res))
+        .then(res => {
+          router.push('/')
+        })
         .catch(err => console.log(err))
     }
   }

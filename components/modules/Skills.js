@@ -4,7 +4,7 @@ import styles from './Skills.module.scss'
 // Components
 import Button from '../elements/Button'
 // Helpers
-import { convertLevel } from '@/helpers/functions'
+import { levelValueToLabel } from '@/helpers/functions'
 
 export default function Skills ({ data, setData }) {
   return (
@@ -31,7 +31,7 @@ function Skill ({ title, level, index, _id, setData, data }) {
     <article className={styles.skill}>
       <div className={styles.content}>
         <p className={styles.title}>{title}</p>
-        <p className={styles.level}>{convertLevel(level)}</p>
+        <p className={styles.level}>{levelValueToLabel(level)}</p>
       </div>
       <div className={styles.buttons}>
         <Button icon={<AiOutlineDelete/>} className={styles.delete} onClick={() => deleteHandler(_id || index, !!_id)}/>
