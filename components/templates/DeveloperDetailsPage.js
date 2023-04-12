@@ -5,7 +5,7 @@ import styles from './DeveloperDetailsPage.module.scss'
 // Components
 import Button from '../elements/Button'
 // Helpers
-import { levelValueToLabel } from '@/helpers/functions'
+import { levelValueToLabel, defaultAjaxError } from '@/helpers/functions'
 
 export default function DeveloperDetailsPage ({ developer }) {
   
@@ -16,7 +16,7 @@ export default function DeveloperDetailsPage ({ developer }) {
       .then(res => {
         router.push('/')
       })
-      .catch(err => console.log(err))
+      .catch(err => defaultAjaxError(err.request.status, err.message))
   }
   
   return (

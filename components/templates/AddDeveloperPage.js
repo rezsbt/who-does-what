@@ -7,6 +7,7 @@ import DeveloperDetailsForm from "../modules/DeveloperDetailsForm"
 import DeveloperSkillsForm from "../modules/DeveloperSkillsForm"
 import Button from "../elements/Button"
 import { useRouter } from "next/router"
+import { defaultAjaxError } from "@/helpers/functions"
 
 const initialData = {
   firstName: '',
@@ -47,7 +48,7 @@ export default function AddDeveloperPage () {
         .then(res => {
           router.push('/')
         })
-        .catch(err => console.log(err))
+        .catch(err => defaultAjaxError(err.request.status, err.message))
     }
   }
   

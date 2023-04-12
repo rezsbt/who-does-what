@@ -14,4 +14,8 @@ const levelValueToLabel = level => {
   }
 }
 
-export { errorDivider, levelValueToLabel } 
+const defaultAjaxError = (statusCode, message) => {
+  alert(`Error ${statusCode} - ${message}`)
+}
+
+export { errorDivider, levelValueToLabel, defaultAjaxError } 
