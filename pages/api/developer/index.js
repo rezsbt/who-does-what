@@ -1,6 +1,6 @@
 import Developer from "@/model/Developer"
 // Helpers
-import { connectDB } from "@/helpers/database"
+import connectDB from "@/database/connectDB"
 import { errorDivider } from "@/helpers/functions"
 import { developerValidation, skillsValidation } from "@/helpers/serverValidations"
 

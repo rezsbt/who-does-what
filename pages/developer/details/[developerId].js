@@ -3,7 +3,7 @@ import Developer from "@/model/Developer"
 // Components
 import DeveloperDetailsPage from "@/components/templates/DeveloperDetailsPage"
 // Helpers
-import { connectDB } from "@/helpers/database"
+import connectDB from "@/database/connectDB"
 
 export default function DeveloperDetails (props) {
   return <DeveloperDetailsPage {...props}/>

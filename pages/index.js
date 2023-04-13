@@ -1,7 +1,7 @@
 // Components
 import HomePage from "@/components/templates/HomePage"
 // Helpers
-import { connectDB } from "@/helpers/database"
+import connectDB from "@/database/connectDB"
 import { errorDivider } from "@/helpers/functions"
 import Developer from "@/model/Developer"
 
