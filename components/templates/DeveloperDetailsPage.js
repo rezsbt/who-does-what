@@ -7,20 +7,35 @@ import Button from '../elements/Button'
 // Helpers
 import { levelValueToLabel, defaultAjaxError } from '@/helpers/functions'
 
-export default function DeveloperDetailsPage ({ developer }) {
+export default function DeveloperDetailsPage ({ developer, errorMessage }) {
   
   const router = useRouter()
   
   const deleteHandler = id => {
-    axios.delete(`/api/developer/${id}`)
-      .then(res => {
-        router.push('/')
-      })
-      .catch(err => defaultAjaxError(err.request.status, err.message))
+    if (!errorMessage) {
+      axios.delete(`/api/developer/${id}`)
+        .then(res => {
+          router.push('/')
+        })
+        .catch(err => defaultAjaxError(err.request.status, err.message))
+    }
+    else {
+      alert(errorMessage)
+    }
+  }
+  
+  const editHandler = id => {
+    
   }
   
   return (
     <>
+      {!!errorMessage && (
+        <div className={styles.error}>
+          {errorMessage}
+        </div>
+      )}
+    
       <div className={`${styles.section} ${styles.details}`}>
         <p>First name: <span>{developer.firstName || '-'}</span></p>
         <p>Last name: <span>{developer.lastName || '-'}</span></p>
@@ -40,7 +55,11 @@ export default function DeveloperDetailsPage ({ developer }) {
       
       <div className={`${styles.section} ${styles.buttons}`}>
         <Button onClick={() => deleteHandler(developer._id)} variant='outline' className={styles.delete}>Delete</Button>
-        <Button href={`/developer/edit/${developer._id}`} className={styles.edit}>Edit</Button>
+        {!!errorMessage ? (
+          <Button onClick={() => alert(errorMessage)} className={styles.edit}>Edit</Button>
+        ) : (
+          <Button href={`/developer/edit/${developer._id}`} onClick={() => editHandler(developer._id)} className={styles.edit}>Edit</Button>
+        )}
       </div>
       
     </>

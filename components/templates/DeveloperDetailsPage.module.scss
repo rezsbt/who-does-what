@@ -1,5 +1,13 @@
 @import '../../styles/utils';
 
+.error {
+  background: $oc-red-2;
+  padding: 1rem;
+  border-radius: $border-radius;
+  margin-bottom: 1rem;
+  color: $oc-red-8;
+}
+
 .section {
   background-color: $oc-gray-2;
   padding: 1rem;

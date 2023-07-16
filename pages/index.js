@@ -5,8 +5,8 @@ import { connectDB } from "@/helpers/database"
 import { errorDivider } from "@/helpers/functions"
 import Developer from "@/model/Developer"
 
-export default function Home ({ data }) {
-  return <HomePage data={data} />
+export default function Home ({ data, errorMessage }) {
+  return <HomePage data={data} errorMessage={errorMessage}/>
 }
 
 export async function getStaticProps () {
@@ -30,7 +30,17 @@ export async function getStaticProps () {
   } catch (err) {
     errorDivider('Connecting to DB error', err)
     return {
-      notFound: true,
+      // notFound: true,
+      props: {
+        data: [{
+          _id: 1,
+          firstName: 'reza',
+          lastName: 'sabet',
+          job: 'Frontend Developer'
+        }],
+        errorMessage: 'Cannot connect to database'
+      },
+      revalidate: Number(process.env.SIX_HOURS)
     }
   }
   

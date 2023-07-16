@@ -25,7 +25,23 @@ export async function getServerSideProps (context) {
     }
   } catch (err) {
     return {
-      notFound: true,
+      props: {
+        developer: {
+          _id: 1,
+          firstName: 'Reza',
+          lastName: 'Sabet',
+          job: 'Frontend Developer',
+          phone: '0990***4032',
+          email: 'rez*******@gmail.com',
+          skills: [
+            {_id: 1, title: 'HTML/CSS', level: 'ADVANCED'},
+            {_id: 1, title: 'JS', level: 'ADVANCED'},
+            {_id: 1, title: 'ReactJS', level: 'INTERMEDIATE'},
+            {_id: 1, title: 'NextJS', level: 'INTERMEDIATE'},
+          ]
+        },
+        errorMessage: 'Cannot connect to database'
+      }
     }
   }
   

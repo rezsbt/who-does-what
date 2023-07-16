@@ -5,3 +5,11 @@
   flex-direction: column;
   gap: 1rem;
 }
+
+.error {
+  background: $oc-red-2;
+  padding: 1rem;
+  border-radius: $border-radius;
+  margin-bottom: 1rem;
+  color: $oc-red-8;
+}
